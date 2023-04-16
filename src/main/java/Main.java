@@ -23,6 +23,7 @@ public class Main {
         map = ReadCSV(col, pathToCsv);
         while (true) {
 
+            System.out.println("Введите название аэропорта");
             s = reader.readLine();
 
             if (s.equals("!quit")) {
@@ -35,7 +36,7 @@ public class Main {
             FindInCsv(interRes, col);
             int time = (int) (System.currentTimeMillis() - m);
 
-            System.out.println("Кол-во найденых строк: " + interRes.size() + " Время, затраченное на поиск: " + time + " ms");
+            System.out.println("Кол-во найденых строк: " + interRes.size() + " Время, затраченное на поиск: " + time + " ms\n");
         }
         reader.close();
     }
